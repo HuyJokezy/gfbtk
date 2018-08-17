@@ -11,6 +11,10 @@ app.use(bodyParser.json());
 
 // Route
 app.get('/', (req, res) => {
+  res.send('<h1>Welcome dude</h1>');
+});
+
+app.post('/', (req, res) => {
   const { a: accessToken, t: fullTextResponse } = req;
   console.log('Access Token:', accessToken);
   console.log('Full text response:', fullTextResponse);
